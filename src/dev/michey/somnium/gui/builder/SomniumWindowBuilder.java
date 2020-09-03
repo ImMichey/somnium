@@ -22,6 +22,7 @@ public class SomniumWindowBuilder {
 
     public SomniumWindowBuilder withSize(int width, int height) {
         somniumWindow.getSwing().setSize(width, height);
+        somniumWindow.centerOnScreen();
         return this;
     }
 

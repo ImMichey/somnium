@@ -12,6 +12,8 @@ public class SomniumLauncher {
 
         // Approach with builder
         SomniumWindow somniumWindow = new SomniumWindowBuilder()
+                .withSize(1280, 720)
+                .withTitle("SOMNIUM")
                 .setDraggable()
                 .hideWindowButtons()
                 .build();

@@ -23,13 +23,17 @@ public class SomniumWindow {
         frame.setResizable(false);
         frame.setLayout(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setLocationRelativeTo(null);
 
+        centerOnScreen();
         setDefaultSomniumTheme();
     }
 
     private void setDefaultSomniumTheme() {
         frame.getContentPane().setBackground(COLOR_PAGE_DARK.getColorMap().get(COLOR_PAGE_KEY_BACKGROUND));
+    }
+
+    public void centerOnScreen() {
+        frame.setLocationRelativeTo(null);
     }
 
     public void setDraggable() {
