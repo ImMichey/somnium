@@ -9,7 +9,7 @@ public abstract class SomniumComponent {
     private int somniumComponentId;
 
     public SomniumComponent() {
-        somniumComponentId = SomniumConstants.somniumController.generatedComponentId();
+        somniumComponentId = SomniumConstants.somniumController.generateSomniumComponentId();
     }
 
     public abstract JComponent getSwing();

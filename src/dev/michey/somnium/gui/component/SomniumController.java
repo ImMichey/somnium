@@ -4,7 +4,7 @@ public class SomniumController {
 
     private int currentId;
 
-    public synchronized int generatedComponentId() {
+    public synchronized int generateSomniumComponentId() {
         int oldId = currentId;
         currentId++;
         return oldId;
