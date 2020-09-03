@@ -20,3 +20,8 @@ window.show();
 SomniumWindow window = new SomniumWindowBuilder().build(); // Optionally, build the window with methods like setDraggable()
 window.show();
 ```
+
+# Screenshots
+Unpopulated example SomiumWindow with default theme and without any components
+
+![alt text](https://share.michey.dev/Bmu89h7CKjZmWGv413QHsHK4OnrzshTw.png "Example Window")
