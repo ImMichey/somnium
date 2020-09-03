@@ -1,6 +1,10 @@
 package dev.michey.somnium.constants;
 
 import dev.michey.somnium.gui.color.ColorPage;
+import dev.michey.somnium.util.ResLoader;
+
+import javax.swing.*;
+import java.awt.image.BufferedImage;
 
 public class SomniumConstants {
 
@@ -21,6 +25,18 @@ public class SomniumConstants {
     static {
         COLOR_PAGE_DARK = new ColorPage();
         COLOR_PAGE_DARK.index(COLOR_PAGE_KEY_BACKGROUND, "#161616");
+    }
+
+    /* Icons */
+    public static int[] WINDOW_ICON_SIZES = new int[] {16, 24, 32, 64, 128, 256, 512};
+    public static BufferedImage[] WINDOW_ICONS;
+
+    static {
+        WINDOW_ICONS = new BufferedImage[WINDOW_ICON_SIZES.length];
+
+        for(int i = 0; i < WINDOW_ICON_SIZES.length; i++) {
+            WINDOW_ICONS[i] = ResLoader.getStaticImage("somnium-moon-" + WINDOW_ICON_SIZES[i] + ".png");
+        }
     }
 
 }

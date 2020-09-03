@@ -30,6 +30,7 @@ public class SomniumWindow {
 
     private void setDefaultSomniumTheme() {
         frame.getContentPane().setBackground(COLOR_PAGE_DARK.getColorMap().get(COLOR_PAGE_KEY_BACKGROUND));
+        frame.setIconImage(WINDOW_ICONS[2]); // 32px looks the most solid
     }
 
     public void centerOnScreen() {
