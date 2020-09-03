@@ -11,11 +11,10 @@ public class SomniumLauncher {
         System.out.println("--=={ Running [" + SOMNIUM_NAME + " v" + SOMNIUM_VERSION + " • b" + SOMNIUM_BUILD + "] }==--");
 
         // Approach with builder
-        SomniumWindow somniumWindow = new SomniumWindowBuilder()
-                .setDraggable()
+        SomniumWindow window = new SomniumWindowBuilder()
                 .build();
 
-        somniumWindow.show();
+        window.show();
     }
 
 }

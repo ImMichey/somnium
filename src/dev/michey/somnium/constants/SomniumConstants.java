@@ -1,9 +1,9 @@
 package dev.michey.somnium.constants;
 
 import dev.michey.somnium.gui.color.ColorPage;
+import dev.michey.somnium.gui.component.SomniumController;
 import dev.michey.somnium.util.ResLoader;
 
-import javax.swing.*;
 import java.awt.image.BufferedImage;
 
 public class SomniumConstants {
@@ -37,6 +37,13 @@ public class SomniumConstants {
         for(int i = 0; i < WINDOW_ICON_SIZES.length; i++) {
             WINDOW_ICONS[i] = ResLoader.getStaticImage("somnium-moon-" + WINDOW_ICON_SIZES[i] + ".png");
         }
+    }
+
+    /* SomniumController */
+    public static SomniumController somniumController;
+
+    static {
+        somniumController = new SomniumController();
     }
 
 }
