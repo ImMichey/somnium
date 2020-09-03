@@ -8,6 +8,10 @@ public class SomniumWindow {
 
     private JFrame frame;
 
+    public SomniumWindow() {
+        this(WINDOW_DEFAULT_WIDTH, WINDOW_DEFAULT_HEIGHT);
+    }
+
     public SomniumWindow(int width, int height) {
         this(width, height, WINDOW_DEFAULT_TITLE);
     }
