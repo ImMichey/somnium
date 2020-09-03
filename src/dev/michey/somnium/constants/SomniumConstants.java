@@ -1,5 +1,7 @@
 package dev.michey.somnium.constants;
 
+import dev.michey.somnium.gui.color.ColorPage;
+
 public class SomniumConstants {
 
     /* Version Constants */
@@ -11,5 +13,13 @@ public class SomniumConstants {
     public static final String WINDOW_DEFAULT_TITLE = "Somnium Window";
     public static final int WINDOW_DEFAULT_WIDTH = 800;
     public static final int WINDOW_DEFAULT_HEIGHT = 600;
+
+    /* Color Constants */
+    public static ColorPage COLOR_PAGE_DARK;
+
+    static {
+        COLOR_PAGE_DARK = new ColorPage();
+        COLOR_PAGE_DARK.index("bg", "#161616");
+    }
 
 }
