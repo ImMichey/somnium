@@ -38,6 +38,21 @@ public class SomniumWindowBuilder {
         return withBackground(colorPage.getColorMap().get(COLOR_PAGE_KEY_BACKGROUND));
     }
 
+    public SomniumWindowBuilder setDraggable() {
+        somniumWindow.setDraggable();
+        return this;
+    }
+
+    public SomniumWindowBuilder setDraggable(boolean flag) {
+        if(flag) return setDraggable();
+        return this;
+    }
+
+    public SomniumWindowBuilder hideWindowButtons() {
+        somniumWindow.getSwing().setUndecorated(true);
+        return this;
+    }
+
     public SomniumWindow build() {
         return somniumWindow;
     }

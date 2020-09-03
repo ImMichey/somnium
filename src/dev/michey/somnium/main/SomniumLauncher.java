@@ -10,16 +10,12 @@ public class SomniumLauncher {
     public static void main(String[] args) {
         System.out.println("--=={ Running [" + SOMNIUM_NAME + " v" + SOMNIUM_VERSION + " • b" + SOMNIUM_BUILD + "] }==--");
 
-        // Approach #1
-        SomniumWindow somniumWindow = new SomniumWindow(640, 480, "Debug Somnium Window");
-        somniumWindow.show();
-
-        // Approach #2
-        SomniumWindow somniumWindow2 = new SomniumWindowBuilder()
-                .withSize(640, 480)
-                .withTitle("Debug Somnium Window 2")
+        // Approach with builder
+        SomniumWindow somniumWindow = new SomniumWindowBuilder()
+                .setDraggable()
+                .hideWindowButtons()
                 .build();
-        somniumWindow2.show();
+        somniumWindow.show();
     }
 
 }

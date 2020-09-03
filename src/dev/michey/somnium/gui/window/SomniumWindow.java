@@ -32,6 +32,12 @@ public class SomniumWindow {
         frame.getContentPane().setBackground(COLOR_PAGE_DARK.getColorMap().get(COLOR_PAGE_KEY_BACKGROUND));
     }
 
+    public void setDraggable() {
+        FrameDragListener frameDragListener = new FrameDragListener(frame);
+        frame.addMouseListener(frameDragListener);
+        frame.addMouseMotionListener(frameDragListener);
+    }
+
     public void show() {
         frame.setVisible(true);
     }
