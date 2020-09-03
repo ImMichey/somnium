@@ -1,10 +1,10 @@
 package dev.michey.somnium.constants;
 
 import dev.michey.somnium.gui.color.ColorPage;
-import dev.michey.somnium.gui.component.SomniumController;
 import dev.michey.somnium.util.ResLoader;
 
 import java.awt.image.BufferedImage;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class SomniumConstants {
 
@@ -40,10 +40,10 @@ public class SomniumConstants {
     }
 
     /* SomniumController */
-    public static SomniumController somniumController;
+    public static AtomicInteger globalSomniumComponentId;
 
     static {
-        somniumController = new SomniumController();
+        globalSomniumComponentId = new AtomicInteger();
     }
 
 }
