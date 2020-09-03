@@ -16,10 +16,11 @@ public class SomniumConstants {
 
     /* Color Constants */
     public static ColorPage COLOR_PAGE_DARK;
+    public static final String COLOR_PAGE_KEY_BACKGROUND = "bg";
 
     static {
         COLOR_PAGE_DARK = new ColorPage();
-        COLOR_PAGE_DARK.index("bg", "#161616");
+        COLOR_PAGE_DARK.index(COLOR_PAGE_KEY_BACKGROUND, "#161616");
     }
 
 }

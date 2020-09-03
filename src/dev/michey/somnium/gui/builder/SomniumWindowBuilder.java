@@ -1,6 +1,9 @@
 package dev.michey.somnium.gui.builder;
 
+import dev.michey.somnium.gui.color.ColorPage;
 import dev.michey.somnium.gui.window.SomniumWindow;
+
+import java.awt.*;
 
 import static dev.michey.somnium.constants.SomniumConstants.*;
 
@@ -20,6 +23,19 @@ public class SomniumWindowBuilder {
     public SomniumWindowBuilder withSize(int width, int height) {
         somniumWindow.getSwing().setSize(width, height);
         return this;
+    }
+
+    public SomniumWindowBuilder withBackground(Color color) {
+        somniumWindow.getSwing().getContentPane().setBackground(color);
+        return this;
+    }
+
+    public SomniumWindowBuilder withBackground(String hex) {
+        return withBackground(Color.decode(hex));
+    }
+
+    public SomniumWindowBuilder withBackground(ColorPage colorPage) {
+        return withBackground(colorPage.getColorMap().get(COLOR_PAGE_KEY_BACKGROUND));
     }
 
     public SomniumWindow build() {

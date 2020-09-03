@@ -24,6 +24,12 @@ public class SomniumWindow {
         frame.setLayout(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
+
+        setDefaultSomniumTheme();
+    }
+
+    private void setDefaultSomniumTheme() {
+        frame.getContentPane().setBackground(COLOR_PAGE_DARK.getColorMap().get(COLOR_PAGE_KEY_BACKGROUND));
     }
 
     public void show() {
