@@ -54,6 +54,16 @@ public class SomniumWindowBuilder {
         return this;
     }
 
+    public SomniumWindowBuilder setResizable() {
+        somniumWindow.getSwing().setResizable(true);
+        return this;
+    }
+
+    public SomniumWindowBuilder setResizable(boolean flag) {
+        if(flag) return setResizable();
+        return this;
+    }
+
     public SomniumWindow build() {
         return somniumWindow;
     }
