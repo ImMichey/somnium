@@ -13,7 +13,7 @@ public class SomniumPanel extends SomniumComponent {
     }
 
     @Override
-    public JComponent getSwing() {
+    public JPanel getSwing() {
         return panel;
     }
 
