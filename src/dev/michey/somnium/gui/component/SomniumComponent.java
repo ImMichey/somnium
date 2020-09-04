@@ -6,16 +6,37 @@ import javax.swing.*;
 
 public abstract class SomniumComponent {
 
-    private int somniumComponentId;
+    private long somniumComponentId;
+    private String somniumComponentName;
 
     public SomniumComponent() {
-        somniumComponentId = SomniumConstants.globalSomniumComponentId.getAndIncrement();
+        somniumComponentId = SomniumConstants.somniumController.generateComponentId();
+        somniumComponentName = "somnium-component-" + somniumComponentId;
+        SomniumConstants.somniumController.registerComponent(this);
     }
 
     public abstract JComponent getSwing();
 
-    public int getSomniumComponentId() {
+    public long getSomniumComponentId() {
         return somniumComponentId;
+    }
+
+    public void show() {
+        getSwing().setVisible(true);
+    }
+
+    public void hide() {
+        getSwing().setVisible(false);
+    }
+
+    public void setSomniumComponentName(String somniumComponentName) {
+        String oldKey = this.somniumComponentName;
+        this.somniumComponentName = somniumComponentName;
+        SomniumConstants.somniumController.updateComponent(this, oldKey);
+    }
+
+    public String getSomniumComponentName() {
+        return somniumComponentName;
     }
 
     public boolean equals(SomniumComponent other) {

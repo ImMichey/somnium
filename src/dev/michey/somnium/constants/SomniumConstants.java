@@ -1,5 +1,6 @@
 package dev.michey.somnium.constants;
 
+import dev.michey.somnium.controller.SomniumController;
 import dev.michey.somnium.gui.color.ColorPage;
 import dev.michey.somnium.util.ResLoader;
 
@@ -39,11 +40,11 @@ public class SomniumConstants {
         }
     }
 
-    /* SomniumController */
-    public static AtomicInteger globalSomniumComponentId;
+    /* Controller */
+    public static SomniumController somniumController;
 
     static {
-        globalSomniumComponentId = new AtomicInteger();
+        somniumController = new SomniumController();
     }
 
 }
