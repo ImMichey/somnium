@@ -1,6 +1,6 @@
 package dev.michey.somnium.controller;
 
-import dev.michey.somnium.gui.component.SomniumComponent;
+import dev.michey.somnium.gui.component.basic.SomniumComponent;
 
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicLong;

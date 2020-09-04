@@ -1,10 +1,14 @@
 package dev.michey.somnium.gui.window;
 
+import dev.michey.somnium.gui.component.basic.SomniumComponent;
+
 import javax.swing.*;
+
+import java.awt.*;
 
 import static dev.michey.somnium.constants.SomniumConstants.*;
 
-public class SomniumWindow {
+public class SomniumWindow extends SomniumComponent {
 
     private JFrame frame;
 
@@ -31,6 +35,7 @@ public class SomniumWindow {
     private void setDefaultSomniumTheme() {
         frame.getContentPane().setBackground(COLOR_PAGE_DARK.getColorMap().get(COLOR_PAGE_KEY_BACKGROUND));
         frame.setIconImage(WINDOW_ICONS[2]); // 32px looks the most solid
+        frame.setVisible(true);
     }
 
     public void centerOnScreen() {
@@ -43,11 +48,8 @@ public class SomniumWindow {
         frame.addMouseMotionListener(frameDragListener);
     }
 
-    public void show() {
-        frame.setVisible(true);
-    }
-
-    public JFrame getSwing() {
+    @Override
+    public Component getSwing() {
         return frame;
     }
 

@@ -1,6 +1,6 @@
 package dev.michey.somnium.gui.component.panel;
 
-import dev.michey.somnium.gui.component.SomniumComponent;
+import dev.michey.somnium.gui.component.basic.SomniumComponent;
 
 import javax.swing.*;
 
