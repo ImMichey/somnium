@@ -1,6 +1,7 @@
 package dev.michey.somnium.gui.component.listener;
 
 import dev.michey.somnium.gui.component.basic.SomniumComponent;
+import dev.michey.somnium.gui.window.SomniumWindow;
 
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -30,7 +31,12 @@ public class ComponentDragListener extends MouseAdapter {
         if(component == null) return;
         if(currCoords == null) return;
         if(mouseDownCompCoords == null) return;
-        component.getSwing().setLocation(currCoords.x - mouseDownCompCoords.x, currCoords.y - mouseDownCompCoords.y);
+
+        if(component instanceof SomniumWindow) {
+            component.getSwing().setLocation(currCoords.x - mouseDownCompCoords.x, currCoords.y - mouseDownCompCoords.y);
+        } else {
+            // Not implemented yet.
+        }
     }
 
 }

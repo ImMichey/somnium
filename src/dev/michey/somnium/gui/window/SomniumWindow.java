@@ -34,7 +34,8 @@ public class SomniumWindow extends SomniumComponent {
         setDefaultSomniumTheme();
     }
 
-    private void setDefaultSomniumTheme() {
+    @Override
+    public void setDefaultSomniumTheme() {
         frame.getContentPane().setBackground(COLOR_PAGE_DARK.getColorMap().get(COLOR_PAGE_KEY_BACKGROUND));
         frame.setIconImage(WINDOW_ICONS[2]); // 32px looks the most solid
     }

@@ -19,13 +19,19 @@ public class SomniumConstants {
     public static final int WINDOW_DEFAULT_WIDTH = 800;
     public static final int WINDOW_DEFAULT_HEIGHT = 600;
 
+    /* Component Constants */
+    public static final int PANEL_DEFAULT_WIDTH = 400;
+    public static final int PANEL_DEFAULT_HEIGHT = 300;
+
     /* Color Constants */
     public static ColorPage COLOR_PAGE_DARK;
     public static final String COLOR_PAGE_KEY_BACKGROUND = "bg";
+    public static final String COLOR_PAGE_KEY_PANEL = "panel";
 
     static {
         COLOR_PAGE_DARK = new ColorPage();
         COLOR_PAGE_DARK.index(COLOR_PAGE_KEY_BACKGROUND, "#161616");
+        COLOR_PAGE_DARK.index(COLOR_PAGE_KEY_PANEL, "#141414");
     }
 
     /* Icons */

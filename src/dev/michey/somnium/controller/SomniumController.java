@@ -29,4 +29,8 @@ public class SomniumController {
         registerComponent(somniumComponent);
     }
 
+    public SomniumComponent getSomniumComponentByName(String name) {
+        return componentMap.get(name);
+    }
+
 }
