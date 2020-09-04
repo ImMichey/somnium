@@ -42,12 +42,6 @@ public class SomniumWindow extends SomniumComponent {
         frame.setLocationRelativeTo(null);
     }
 
-    public void setDraggable() {
-        FrameDragListener frameDragListener = new FrameDragListener(frame);
-        frame.addMouseListener(frameDragListener);
-        frame.addMouseMotionListener(frameDragListener);
-    }
-
     @Override
     public Component getSwing() {
         return frame;

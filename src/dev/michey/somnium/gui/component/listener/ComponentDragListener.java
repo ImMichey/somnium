@@ -1,17 +1,18 @@
-package dev.michey.somnium.gui.window;
+package dev.michey.somnium.gui.component.listener;
 
-import javax.swing.*;
+import dev.michey.somnium.gui.component.basic.SomniumComponent;
+
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class FrameDragListener extends MouseAdapter {
+public class ComponentDragListener extends MouseAdapter {
 
-    private final JFrame frame;
+    private final SomniumComponent component;
     private Point mouseDownCompCoords = null;
 
-    public FrameDragListener(JFrame frame) {
-        this.frame = frame;
+    public ComponentDragListener(SomniumComponent component) {
+        this.component = component;
     }
 
     public void mouseReleased(MouseEvent e) {
@@ -26,10 +27,10 @@ public class FrameDragListener extends MouseAdapter {
 
     public void mouseDragged(MouseEvent e) {
         Point currCoords = e.getLocationOnScreen();
-        if(frame == null) return;
+        if(component == null) return;
         if(currCoords == null) return;
         if(mouseDownCompCoords == null) return;
-        frame.setLocation(currCoords.x - mouseDownCompCoords.x, currCoords.y - mouseDownCompCoords.y);
+        component.getSwing().setLocation(currCoords.x - mouseDownCompCoords.x, currCoords.y - mouseDownCompCoords.y);
     }
 
 }

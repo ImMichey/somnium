@@ -1,8 +1,8 @@
 package dev.michey.somnium.gui.component.basic;
 
 import dev.michey.somnium.constants.SomniumConstants;
+import dev.michey.somnium.gui.component.listener.ComponentDragListener;
 
-import javax.swing.*;
 import java.awt.*;
 import java.util.LinkedList;
 import java.util.List;
@@ -48,6 +48,12 @@ public abstract class SomniumComponent {
 
     public void removeSomniumComponent(SomniumComponent somniumComponent) {
         childComponents.remove(somniumComponent);
+    }
+
+    public void setDraggable() {
+        ComponentDragListener componentDragListener = new ComponentDragListener(this);
+        getSwing().addMouseListener(componentDragListener);
+        getSwing().addMouseMotionListener(componentDragListener);
     }
 
     public void setSomniumComponentName(String somniumComponentName) {
