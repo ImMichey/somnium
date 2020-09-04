@@ -16,6 +16,10 @@ public class SomniumWindow extends SomniumComponent {
         this(WINDOW_DEFAULT_WIDTH, WINDOW_DEFAULT_HEIGHT);
     }
 
+    public SomniumWindow(String title) {
+        this(WINDOW_DEFAULT_WIDTH, WINDOW_DEFAULT_HEIGHT, title);
+    }
+
     public SomniumWindow(int width, int height) {
         this(width, height, WINDOW_DEFAULT_TITLE);
     }
