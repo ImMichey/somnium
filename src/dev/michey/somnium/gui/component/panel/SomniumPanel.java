@@ -13,6 +13,8 @@ public class SomniumPanel extends SomniumComponent {
     public SomniumPanel() {
         panel = new JPanel();
         panel.setSize(PANEL_DEFAULT_WIDTH, PANEL_DEFAULT_HEIGHT);
+
+        setDefaultSomniumTheme();
     }
 
     @Override

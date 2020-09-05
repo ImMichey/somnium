@@ -23,6 +23,8 @@ public class SomniumWindow extends SomniumComponent {
     }
 
     public SomniumWindow(int width, int height, String title) {
+        super();
+
         frame = new JFrame();
         frame.setSize(width, height);
         frame.setTitle(title);
