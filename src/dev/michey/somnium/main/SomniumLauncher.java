@@ -1,6 +1,5 @@
 package dev.michey.somnium.main;
 
-import dev.michey.somnium.gui.builder.SomniumWindowBuilder;
 import dev.michey.somnium.gui.component.panel.SomniumPanel;
 import dev.michey.somnium.gui.window.SomniumWindow;
 
@@ -18,8 +17,19 @@ public class SomniumLauncher {
         SomniumPanel panel = new SomniumPanel();
         panel.setDraggable();
 
+        SomniumPanel panel2 = new SomniumPanel();
+
+        SomniumPanel panel3 = new SomniumPanel();
+        panel2.addSomniumComponent(panel3);
+
+        SomniumPanel panel4 = new SomniumPanel();
+
         window.addSomniumComponent(panel);
+        window.addSomniumComponent(panel2);
+        window.addSomniumComponent(panel4);
         window.show();
+
+        somniumController.printDebugTree();
     }
 
 }
